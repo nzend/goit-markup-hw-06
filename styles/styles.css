@@ -362,15 +362,126 @@ img {
   height: 100%;
   fill: #000;
 }
-.callback {
-  margin-left: 30px;
+.form {
+  /* outline: solid 1px red; */
+  padding: 40px;
+}
+.form label {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+
+  color: var(--main-color);
+}
+.form span:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.form-field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-field:nth-child(5) {
+  margin-bottom: 20px;
+}
+.input-place {
+  position: relative;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px 12px 12px 42px;
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-icons {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.modal-button {
+  display: block;
+
+  margin-top: 30px;
+  margin-left: auto;
   margin-right: auto;
 }
 .callback-title {
   margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--second-color);
 }
-textarea {
+.form-field textarea {
   resize: none;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox {
+}
+.checkbox {
+  appearance: none;
+}
+.checkbox:checked + .accept-icon {
+  background-color: var(--brend-color);
+  background-image: url(../images/check-icon.svg);
+  background-size: contain;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  border-color: var(--brend-color);
+}
+.input-checkbox {
+  outline: solid 1px red;
+}
+.input-checkbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.accept-icon {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 23px;
+
+  transform: translateY(-50%);
+
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid black;
+  border-radius: 2px;
+}
+.accept-title {
+  margin-left: 7px;
+
+  font-size: 14px;
+
+  color: var(--main-color);
+}
+.contract {
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: var(--brend-color);
 }
 
 /* sections */
@@ -756,12 +867,12 @@ footer {
   display: flex;
   align-items: flex-end;
 }
-.form-field {
+.form-field-footer {
   /* outline: 1px solid red; */
   display: flex;
   flex-direction: column;
 }
-.form-field input {
+.form-field-footer input {
   font: inherit;
   color: inherit;
 }
@@ -769,7 +880,7 @@ footer {
 .email-input {
   width: 358px;
   height: 50px;
-  padding: 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
   margin: 0;
   background: rgba(0, 0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.3);

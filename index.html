@@ -495,7 +495,7 @@
         </div>
         <div class="mailing-list">
           <form class="email-list">
-            <div class="form-field">
+            <div class="form-field-footer">
               <label class="email-label" for="email-input">
                 Підпишіться на розсилку</label
               >
@@ -524,28 +524,68 @@
     </footer>
     <div class="backdrop" data-modal>
       <div class="modal">
-        <h2 class="callback-title">Залиште свої дані, ми вам передзвонимо</h2>
-        <form action="" class="callback">
-          <label for="name">Ім'я</label>
-          <input type="text" name="name" id="name" />
-          <br />
-          <label for="phone">Телефон</label>
-          <input type="tel" name="phone" id="phone" />
-          <br />
-          <label for="email">Пошта</label>
-          <input type="email" name="email" id="email" />
-          <br />
-          <label for="comment">Коментар</label>
+        <form class="form callback">
+          <h2 class="callback-title">Залиште свої дані, ми вам передзвонимо</h2>
 
-          <textarea name="comment" id="comment" rows="8"></textarea>
-          <br />
+          <label class="form-field">
+            <span>Ім'я</span>
+            <div class="input-place">
+              <input type="text" name="name" />
+              <svg width="15" height="15" class="modal-icons">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </div>
+          </label>
 
-          <input type="checkbox" name="accept" id="accept" />
-          <label for="accept"
-            >Погоджуюся з розсилкою та приймаю Умови договору</label
-          >
-          <br />
-          <button class="hero-button" type="submit">Відправити</button>
+          <label class="form-field">
+            <span>Телефон</span>
+            <div class="input-place">
+              <input type="tel" name="phone" />
+              <svg width="15" height="15" class="modal-icons">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </div>
+          </label>
+
+          <label class="form-field">
+            <span>Пошта</span>
+            <div class="input-place">
+              <input type="email" name="email" />
+              <svg width="15" height="15" class="modal-icons">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </div>
+          </label>
+
+          <label class="form-field">
+            <span>Коментар</span>
+            <textarea
+              name="comment"
+              rows="8"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+
+          <label class="form-checkbox accept-label" for="accept">
+            <div class="input-checkbox">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="accept"
+                id="accept"
+              />
+              <span class="accept-icon"></span>
+              <p class="accept-title">
+                Погоджуюся з розсилкою та приймаю
+                <a class="contract" href="#">Умови договору</a>
+              </p>
+              
+            </div>
+          </label>
+
+          <button class="modal-button hero-button" type="submit">
+            Відправити
+          </button>
         </form>
         <button class="icon-button" data-modal-close>
           <svg class="icon-close" width="11px" height="11px">
