@@ -378,7 +378,7 @@ img {
 
   color: var(--main-color);
 }
-.form span:not(:last-child) {
+.form-field span:not(:last-child) {
   margin-bottom: 4px;
 }
 
@@ -452,7 +452,6 @@ img {
   line-height: 1.16;
   letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
   outline: none;
   transition: border-color 250ms var(--cubic);
 }
@@ -461,27 +460,22 @@ img {
   border-color: var(--brend-color);
 }
 
+
 .checkbox {
   appearance: none;
 }
 
+
 .input-checkbox {
-  /* outline: solid 1px red; */
-}
-.input-checkbox {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 .accept-icon {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 13px;
+  display: block;
 
-  transform: translateY(-50%);
+
   transition: background-image 250ms var(--cubic);
 
   width: 15px;
@@ -500,6 +494,8 @@ img {
 }
 
 .accept-title {
+  margin-left: 8px;
+  
   font-size: 14px;
 
   color: var(--main-color);
@@ -909,6 +905,7 @@ footer {
 }
 
 .email-input {
+  color: var(--second-white-color);
   width: 358px;
   height: 50px;
   padding: 15px 15px 15px 15px;
