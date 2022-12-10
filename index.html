@@ -495,19 +495,15 @@
         </div>
         <div class="mailing-list">
           <form class="email-list">
-            <div class="form-field-footer">
-              <label class="email-label" for="email-input">
-                Підпишіться на розсилку</label
-              >
-
+            <label class="form-field-footer">
+              <span class="email-label">Підпишіться на розсилку</span>
               <input
                 class="email-input"
                 type="email"
                 name="username"
-                id="email-input"
                 placeholder="E-mail"
-              />
-            </div>
+            /></label>
+
             <button class="sign-up-button" type="submit">
               Підписатися
               <svg class="icon-send">
@@ -530,7 +526,12 @@
           <label class="form-field">
             <span>Ім'я</span>
             <div class="input-place">
-              <input type="text" name="name" />
+              <input
+                class="modal-input"
+                type="text"
+                name="name"
+                placeholder=" "
+              />
               <svg width="15" height="15" class="modal-icons">
                 <use href="./images/icons.svg#icon-person-black"></use>
               </svg>
@@ -540,7 +541,7 @@
           <label class="form-field">
             <span>Телефон</span>
             <div class="input-place">
-              <input type="tel" name="phone" />
+              <input class="modal-input" type="tel" name="phone" />
               <svg width="15" height="15" class="modal-icons">
                 <use href="./images/icons.svg#icon-phone-black"></use>
               </svg>
@@ -550,7 +551,7 @@
           <label class="form-field">
             <span>Пошта</span>
             <div class="input-place">
-              <input type="email" name="email" />
+              <input class="modal-input" type="email" name="email" />
               <svg width="15" height="15" class="modal-icons">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
@@ -560,26 +561,21 @@
           <label class="form-field">
             <span>Коментар</span>
             <textarea
+              class="comment-textarea"
               name="comment"
               rows="8"
               placeholder="Введіть текст"
             ></textarea>
           </label>
 
-          <label class="form-checkbox accept-label" for="accept">
+          <label class="form-checkbox accept-label">
             <div class="input-checkbox">
-              <input
-                class="checkbox"
-                type="checkbox"
-                name="accept"
-                id="accept"
-              />
+              <input class="checkbox" type="checkbox" name="accept" />
               <span class="accept-icon"></span>
               <p class="accept-title">
                 Погоджуюся з розсилкою та приймаю
                 <a class="contract" href="#">Умови договору</a>
               </p>
-              
             </div>
           </label>
 
