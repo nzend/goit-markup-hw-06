@@ -101,7 +101,7 @@ img {
   border-bottom: 1px solid var(--header-border-bottom);
 }
 /* Лого */
-.logo {
+.header-logo {
   display: inline-block;
 
   font-family: "Raleway", sans-serif;
@@ -111,7 +111,7 @@ img {
 
   color: var(--main-black-color);
 }
-.logo--web {
+.header-logo--web {
   color: var(--brend-color);
 }
 
@@ -127,10 +127,7 @@ img {
 .site-nav {
   display: flex;
 }
-.auth-nav {
-  display: flex;
-  margin-left: auto;
-}
+
 .site-nav {
   margin-left: 93px;
 }
@@ -188,29 +185,31 @@ img {
 
 /* контакти */
 
-.page-header__contacts {
+.contacts {
   display: flex;
   margin-left: auto;
 }
 
-.contacts-icon.envelope {
+.contacts__icon--envelope {
   width: 16px;
   height: 12px;
   fill: currentColor;
 }
-.contacts-icon.smartphone {
+.contacts__icon--smartphone {
   width: 10px;
   height: 16px;
   fill: currentColor;
 }
-.contacts-icon {
-  width: 100%;
-  height: 100%;
+.contacts__icon {
   margin-right: 10px;
+  
+}
+.contacts__item + .contacts__item {
+  margin-left: 30px;
 }
 
-.mail-link,
-.phone-link {
+.contacts__mail-link,
+.contacts__phone-link {
   display: flex;
   align-items: center;
 
@@ -224,12 +223,12 @@ img {
   color: var(--main-color);
   transition: color 250ms var(--cubic);
 }
-.mail-link:hover,
-.phone-link:hover,
+.contacts__mail-link:hover,
+.contacts__phone-link:hover,
 .footer-mail-link:hover,
 .footer-phone-link:hover,
-.mail-link:focus,
-.phone-link:focus,
+.contacts__mail-link:focus,
+.contacts__phone-link:focus,
 .footer-mail-link:focus,
 .footer-phone-link:focus {
   color: var(--brend-color);
@@ -265,7 +264,7 @@ img {
   padding-bottom: 200px;
 }
 
-.hero-title {
+.hero__title {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -278,7 +277,7 @@ img {
   color: var(--main-white-color);
 }
 
-.hero-button {
+.hero__button {
   padding: 10px 32px;
   border: none;
   border-radius: var(--border-radius);
@@ -406,7 +405,6 @@ img {
   border-color: var(--brend-color);
 }
 
-
 .form-field:focus-within .modal-icons,
 .form-field:hover .modal-icons,
 .form-field:focus .modal-icons {
@@ -456,11 +454,9 @@ img {
   border-color: var(--brend-color);
 }
 
-
 .checkbox {
   appearance: none;
 }
-
 
 .input-checkbox {
   display: flex;
@@ -470,7 +466,6 @@ img {
 }
 .accept-icon {
   display: block;
-
 
   transition: background-image 250ms var(--cubic);
 
@@ -491,7 +486,7 @@ img {
 
 .accept-title {
   margin-left: 8px;
-  
+
   font-size: 14px;
 
   color: var(--main-color);
@@ -527,7 +522,7 @@ img {
   border-radius: var(--border-radius);
 }
 
-.featurs-flex {
+.featurs__flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,12 +536,12 @@ img {
   background-color: var(--second-white-color);
 }
 
-.features-list {
+.features__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.features-list li {
+.features__item {
   max-width: 270px;
 }
 .features-title {
