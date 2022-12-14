@@ -22,28 +22,28 @@
     <!-- header  -->
 
     <header class="page-header">
-      <div class="container main-nav">
-        <nav class="nav-nav">
+      <div class="container container--main-navigation">
+        <nav class="page-header__navigation">
           <a class="logo" href="./index.html"
-            ><span class="web">Web</span>Studio</a
+            ><span class="logo--web">Web</span>Studio</a
           >
 
-          <ul class="site-nav list">
-            <li class="item">
-              <a class="studio-link current link" href="./index.html">Студія</a>
+          <ul class="site-nav ">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav--current" href="./index.html">Студія</a>
             </li>
-            <li class="item">
-              <a class="portfolio-link link" href="./portfolio.html"
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="./portfolio.html"
                 >Портфоліо</a
               >
             </li>
-            <li class="item">
-              <a class="contacts-link link" href="#">Контакти</a>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Контакти</a>
             </li>
           </ul>
         </nav>
-        <ul class="contacts auth-nav list">
-          <li class="item">
+        <ul class="page-header__contacts">
+          <li class="site-nav__item">
             <a
               class="mail-link link mail-icon"
               href="mailto:info@devstudio.com"
@@ -58,7 +58,7 @@
               info@devstudio.com
             </a>
           </li>
-          <li class="item">
+          <li class="site-nav__item">
             <a class="phone-link link" href="tel:+380961111111">
               <svg wight="10px" height="16px" class="contacts-icon smartphone">
                 <use href="./images/icons.svg#icon-smartphone"></use>
@@ -531,6 +531,8 @@
                 type="text"
                 name="name"
                 placeholder=" "
+                required pattern="^[a-zA-Z]+\s[a-zA-Z]+$" 
+                pattern="^[a-zA-Z]+\s[a-zA-Z]+$" title="Username must be two words separated by space." 
               />
               <svg width="15" height="15" class="modal-icons">
                 <use href="./images/icons.svg#icon-person-black"></use>
@@ -541,7 +543,7 @@
           <label class="form-field">
             <span>Телефон</span>
             <div class="input-place">
-              <input class="modal-input" type="tel" name="phone" />
+              <input class="modal-input" type="tel" name="phone" required />
               <svg width="15" height="15" class="modal-icons">
                 <use href="./images/icons.svg#icon-phone-black"></use>
               </svg>
@@ -551,7 +553,7 @@
           <label class="form-field">
             <span>Пошта</span>
             <div class="input-place">
-              <input class="modal-input" type="email" name="email" />
+              <input class="modal-input" type="email" name="email" required />
               <svg width="15" height="15" class="modal-icons">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
@@ -570,7 +572,7 @@
 
           <label class="form-checkbox accept-label">
             <div class="input-checkbox">
-              <input class="checkbox" type="checkbox" name="accept" />
+              <input class="checkbox" type="checkbox" name="accept"  />
               <span class="accept-icon"></span>
               <p class="accept-title">
                 Погоджуюся з розсилкою та приймаю
